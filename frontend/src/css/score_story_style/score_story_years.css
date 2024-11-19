@@ -1,0 +1,147 @@
+.score-story-years-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 87vh;
+    width: 100vw;
+    overscroll-behavior: none;
+    overflow: auto;
+}
+
+.lines_years {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    height: 2vh;
+}
+
+.line-1-years {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.line-2-years {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+}
+
+.line-3-years {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+}
+
+.line-4-years {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+}
+.welcome-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2.5vh;
+    margin-bottom: 4.5vh;
+}
+.welcome {
+    color: white;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.flame_emoji_years {
+    height: 4vh;
+}
+
+.joined-telegram {
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+}
+
+.years {
+    z-index: 1;
+    color: white;
+    font-size: 35vh;
+    font-weight: bold;
+}
+
+.confettie-story {
+    pointer-events: none;
+    position: absolute;
+    width: 100vw;
+    z-index: 2;
+}
+
+.years-info {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.years-ago {
+    color: white;
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+.account-top {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2vh;
+    font-weight: bold;
+    animation: yearsAppearence 1s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.check-reward-text {
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+    animation: yearsAppearence 1s ease-out forwards;
+    animation-delay: 0.75s;
+    opacity: 0;
+}
+
+@keyframes yearsAppearence {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.continue-button-years {
+    position: absolute;
+    background-color: white;
+    width: 90vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    bottom: 5%;
+    text-decoration: none;
+}
+
+.continue-text {
+    color: black;
+    font-size: 2vh;
+    font-weight: bold;
+    text-decoration: none;
+}

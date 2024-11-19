@@ -1,0 +1,263 @@
+.container-tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    height: 87.5vh;
+    width: 100vw;
+    animation: component-appearence 0.25s forwards;
+}
+
+.tasks_emoji_animated {
+    width: 80px;
+    height: 80px;
+    margin-top: 3.5vh;
+    transition: transform 0.3s ease;
+    animation: drop-from-top 0.35s forwards;
+}
+
+.tasks_emoji_animated:active {
+    transform: scale(0.85);
+}
+
+.tasks-header {
+    color: white;
+    font-size: 3vh;
+    font-weight: bold;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    text-align: center;
+    animation: appearance-gifts 0.35s forwards;
+}
+
+.tasks-description {
+    color: white;
+    font-size: 15px;
+    opacity: 65%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    border-bottom: 1.5px solid #282828;
+    width: 85vw;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.text {
+    flex: 1;
+}
+
+.title {
+    color: white;
+    font-size: 14px;
+    font-weight: 650;
+    padding-bottom: 1vh;
+}
+
+.points {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+/* Если задание не выполнено */
+.open-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 75px;
+    border-radius: 25px;
+    background-color: #282828;
+    transition: transform 0.2s ease;
+}
+
+.open-button-skeleton {
+    height: 35px;
+    width: 75px;
+    border-radius: 25px;
+}
+
+.open {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 650;
+    text-align: center;
+    animation: start-appearence 0.45s forwards;
+}
+
+@keyframes start-appearence {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.75;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.open-button:active {
+    transform: scale(0.95);
+}
+
+/* Если задание грузится */
+.cheking-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 75px;
+    border-radius: 25px;
+    background-color: #282828;
+}
+
+.loader-task {
+    width: 16px;
+    height: 16px;
+    border: 3px solid #FFF;
+    opacity: 50%;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1.2s linear infinite;
+}
+
+/* Если задание выполнено */
+.task-done {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 75px;
+    border-radius: 25px;
+    /* background-color: #282828; Мб вернуть*/
+}
+
+.check_mark {
+    width: 16px;
+    height: 16px;
+    animation: start-appearence 0.45s forwards;
+}
+
+/* Tasks status loader */
+.loader-box-task-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    animation: loader_appearence 1s forwards;
+}
+
+@keyframes loader_appearence {
+    0% {
+        opacity: 0%;
+    }
+
+    15% {
+        opacity: 0%;
+    }
+
+    25% {
+        opacity: 100%;
+    }
+}
+
+.loader-task-status {
+    width: 16px;
+    height: 16px;
+    border: 2.5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1.2s linear infinite;
+}
+
+/* После проверки статуса задания если ошибка или false */
+.circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.circle {
+    z-index: 1;
+    position: relative;
+    background: #282828;
+    transform: scale(1);
+    animation: success-anim 700ms ease;
+}
+
+@keyframes success-anim {
+    0% {
+        transform: scale(0);
+    }
+
+    30% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes circle-anim {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.error::before,
+.error::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    /* Уменьшаем размер линий */
+    height: 3px;
+    /* Уменьшаем толщину линий */
+    background: #FF4410;
+    top: 50%;
+    /* Центрируем крестик по вертикали */
+    left: 50%;
+    /* Центрируем крестик по горизонтали */
+    transform-origin: center center;
+    /* Центрирование при вращении */
+}
+
+.error::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* Позиционирование первой линии крестика */
+}
+
+.error::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    /* Позиционирование второй линии крестика */
+}

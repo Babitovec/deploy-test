@@ -1,0 +1,197 @@
+.container-frens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 87.5vh;
+    box-sizing: border-box;
+    overflow: auto;
+    flex: auto;
+    animation: component-appearence 0.25s forwards;
+}
+
+.masks-emoji-animated {
+    width: 80px;
+    height: 80px;
+    margin-top: 3.5vh;
+    animation: drop-from-top 0.35s forwards;
+}
+
+.frens-header {
+    color: white;
+    font-size: 3vh;
+    font-weight: bold;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    text-align: center;
+    animation: appearance-gifts 0.35s forwards;
+}
+
+.frens-description {
+    color: white;
+    font-size: 15px;
+    opacity: 65%;
+    text-align: center;
+    margin-bottom: 2.5vh;
+    width: 85vw;
+}
+
+.burn-logo-claim {
+    width: 3vh;
+    height: 3vh;
+}
+
+.frens-count {
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+    text-align: left;
+    width: 85vw;
+}
+
+.frens-invited-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.5vh;
+    flex-grow: 1;
+    margin-bottom: 7.5vh;
+}
+
+.invited-fren {
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid #282828;
+    width: 85vw;
+    margin-bottom: 1.5vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.fren-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.username-and-frens-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fren-username {
+    color: white;
+    font-size: 4.33vw;
+    font-weight: bold;
+}
+
+.username-years {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 3.5vw;
+}
+
+.fren-total-earned-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.received_from_friend {
+    color: white;
+    font-size: 5.42vw;
+    font-weight: bold;
+}
+
+.invite-fren-background {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 7.5vh;
+    bottom: 12.5%;
+}
+
+.invite-fren-button {
+    position: fixed;
+    background-color: white;
+    width: 90vw;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    bottom: 12.5%;
+    z-index: 10;
+    transition: transform 0.25s ease;
+    animation: appearance-invite-button 0.35s forwards;
+}
+
+.invite-fren-text {
+    color: black;
+    font-size: 4.33vw;
+    font-weight: bold;
+}
+
+.invite-fren-button:active {
+    transform: scale(0.97);
+}
+
+@keyframes appearance-invite-button {
+    0% {
+        bottom: 5%;
+        transform: scale(1.15);
+    }
+
+    25% {
+        transform: scale(1.05);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        bottom: 12.5%;
+        transform: scale(1);
+    }
+}
+
+.no-referrals-message-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-referrals-message {
+    font-size: 15px;
+    color: white;
+    opacity: 65%;
+    margin-bottom: 7.5vh;
+}
+
+/* Skeleton */
+.frens-count-container-sleketon {
+    width: 85vw;
+    margin-bottom: 2.5vh;
+}
+
+.frens-count-skeleton {
+    font-size: 2.5vh;
+    width: 42.5vw;
+}
+
+.invited-fren-skeleton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1.5px solid #282828;
+    width: 85vw;
+    height: 3.5vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}

@@ -1,0 +1,184 @@
+.container-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 87.5vh;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: auto;
+    animation: component-appearence 0.25s forwards;
+}
+
+.crown-emoji-animated {
+    width: 80px;
+    height: 80px;
+    margin-top: 3.5vh;
+    animation: drop-from-top 0.35s forwards;
+}
+
+.stats-header {
+    color: white;
+    font-size: 6.5vw;
+    font-weight: bold;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    text-align: center;
+    animation: appearance-gifts 0.35s forwards;
+}
+
+.user-stats-box-container {
+    background-color: #282828;
+    border-radius: 25px;
+    width: 85vw;
+    height: 20vw;
+    display: block;
+    margin-bottom: 2.5vh;
+}
+
+.user-stats-box {
+    border-radius: 25px;
+    width: 85vw;
+    height: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5vh;
+    box-sizing: border-box;
+    /* Учитываем отступы и границы */
+}
+
+.username-and-flame-count-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Выровнять элементы по левому краю */
+    margin-left: 7vw;
+}
+
+.stats_username {
+    text-align: center;
+    color: white;
+    font-size: 4.33vw;
+    font-weight: bold;
+    margin-bottom: 1.5vw;
+}
+
+.burn-count {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 3.5vw;
+}
+
+.user-rank {
+    color: white;
+    font-size: 4.33vw;
+    font-weight: bold;
+    margin-right: 7vw;
+}
+
+.total-users {
+    color: white;
+    font-size: 4.33vw;
+    font-weight: bold;
+    text-align: left;
+    width: 85vw;
+    margin-bottom: 2.5vh;
+}
+
+.leaderboard {
+    width: 85vw;
+    flex: 1;
+}
+
+.leaderboard-member {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1vh;
+    border-bottom: 1.5px solid #282828;
+}
+
+.rank-and-username-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10.8vw;
+}
+
+.rank-leaderbord-container {
+    width: 17.5vw;
+}
+
+.rank-leaderbord-gold {
+    color: #F7D000;
+    font-size: 6.5vw;
+    font-weight: bold;
+    text-align: left;
+}
+
+.rank-leaderbord-silver {
+    color: #BABABA;
+    font-size: 6.5vw;
+    font-weight: bold;
+    text-align: left;
+}
+
+.rank-leaderbord-bronze {
+    color: #C77B30;
+    font-size: 6.5vw;
+    font-weight: bold;
+    text-align: left;
+}
+
+.rank-leaderbord- {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 6.5vw;
+    font-weight: bold;
+    text-align: left;
+}
+
+.leaderboard-member-username {
+    color: white;
+    font-size: 4.33vw;
+    font-weight: bold;
+}
+
+.leaderboard-member-flames {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.leaderboard-member-flames-count {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 4.33vw;
+    margin-right: 1vw;
+}
+
+.leaderboard-member-flame-icon {
+    width: 4.33vw;
+    height: 4.33vw;
+}
+
+.user-stats-box-container-skeleton {
+    border-radius: 25px;
+    width: 85vw;
+    height: 20vw;
+    display: block;
+}
+
+.total-users-skeleton {
+    width: 50vw;
+    height: 22px;
+    margin-bottom: 2.5vh;
+}
+
+.leaderboard-member-skeleton {
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}

@@ -1,0 +1,168 @@
+.score-story-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 87vh;
+    width: 100vw;
+    overscroll-behavior: none;
+    overflow: auto;
+}
+
+.lines_info {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    height: 2vh;
+}
+
+.line-1-info {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.line-2-info {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.line-3-info {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.line-4-info {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+}
+
+.roadmap-text {
+    color: white;
+    font-size: 4vh;
+    font-weight: bold;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.notification-text {
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin-bottom: 2.5vh;
+}
+
+.money-emoji-animated-story-reward {
+    height: 32vh;
+}
+
+.phase-1 {
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+}
+
+.continue-button-info {
+    position: absolute;
+    background-color: white;
+    width: 90vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    bottom: 5%;
+}
+
+.continue-text {
+    color: black;
+    font-size: 2vh;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.roadmap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    width: 37.5vh;
+    margin: auto;
+}
+
+.phase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1vh;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Задержка для каждой фазы */
+.phase:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.phase:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.phase:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.phase:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.phase:nth-child(5) {
+    animation-delay: 1.5s;
+}
+
+.title-rodmap {
+    display: flex;
+    align-items: center;
+}
+
+.phase-title-box {
+    display: flex;
+    align-items: center;
+}
+
+.phase-title {
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+}
+
+.phase-emoji {
+    height: 2.5vh;
+    margin-right: 1vh;
+}
+
+.phase-date {
+    color: white;
+    font-size: 2.5vh;
+}

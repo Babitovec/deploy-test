@@ -1,0 +1,38 @@
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    background-color: #000000;
+    z-index: 10;
+    height: 10vh;
+    padding-top: 2.5vh;
+}
+
+.nav-item {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 50%;
+    transition: opacity 0.3s;
+    height: 5vh;
+}
+
+.nav-item.active {
+    opacity: 100%;
+}
+
+.nav-item:active {
+    transform: scale(0.97);
+}
+
+.nav-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}

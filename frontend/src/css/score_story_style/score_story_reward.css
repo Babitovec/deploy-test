@@ -1,0 +1,164 @@
+.score-story-reward-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 87vh;
+    width: 100vw;
+    overscroll-behavior: none;
+    overflow: auto;
+}
+
+.lines_reward {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    height: 2vh;
+}
+
+.line-1-reward {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.line-2-reward {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.line-3-reward {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 25px;
+}
+
+.line-4-reward {
+    width: 24vw;
+    height: 0.5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+}
+
+.reward-handline {
+    color: white;
+    font-size: 4vh;
+    font-weight: bold;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.reward {
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin-bottom: 2.5vh;
+}
+
+.flame-emoji-animated-story-reward {
+    height: 32vh;
+    margin-bottom: 2.5vh;
+}
+
+.flames-count-story {
+    color: #ffffff;
+    font-size: 6vh;
+    font-weight: bold;
+    position: relative;
+}
+
+@keyframes casinoSpin {
+    0% {
+        transform: scale(0.6);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.countup-wrapper {
+    display: inline-block;
+    animation: casinoSpin 2.5s forwards;
+}
+
+.flame-text-story {
+    color: #ffffff;
+    font-size: 4vh;
+    font-weight: bold;
+    opacity: 50%;
+}
+
+.rewards-description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.rewards-box-age {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1vh 0 1vh 0;
+    opacity: 0;
+    animation: rewardsBoxAppearance 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.rewards-box-premium {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1vh 0 1vh 0;
+    opacity: 0;
+    animation: rewardsBoxAppearance 1s ease-out forwards;
+    animation-delay: 0.75s;
+}
+
+@keyframes rewardsBoxAppearance {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.rewards-emoji {
+    height: 4vh;
+}
+
+.reward-title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.continue-button-reward {
+    position: absolute;
+    background-color: white;
+    width: 90vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    bottom: 5%;
+}
+
+.continue-text {
+    color: black;
+    font-size: 2vh;
+    font-weight: bold;
+    text-decoration: none;
+}
