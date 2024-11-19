@@ -1,7 +1,7 @@
 import UserModel from "../models/user.js";
 import crypto from "crypto";
 import * as jwt from "../utils/jwt.js"
-import { referralHandler, getReferrer } from "./referralController.js";
+import { getReferrer } from "./referralController.js";
 
 export const createUser = async (req, res) => {
     // console.log("Received request body:", req.body); // Логируем запрос
