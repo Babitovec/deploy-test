@@ -1,4 +1,4 @@
-FROM node:alpine as build
+FROM node:20.16.0-alpine as build
 
 RUN npm cache clean --force
 
