@@ -1,8 +1,10 @@
 FROM node:20.16.0-alpine as build
 
+RUN npm install -g npm@latest
+
 RUN npm cache clean --force
 
-COPY package.json package-lock.json
+COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
 
