@@ -1,5 +1,7 @@
 FROM node:alpine as build
 
+RUN npm cache clean --force
+
 COPY package.json package-lock.json
 RUN npm install
 COPY . .
