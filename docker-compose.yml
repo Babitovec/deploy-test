@@ -1,3 +1,9 @@
+version: '3.8'
+
+networks:
+  dev: # Определяем сеть dev
+    driver: bridge
+
 services:
   nginx:
     image: nginx:stable-alpine
