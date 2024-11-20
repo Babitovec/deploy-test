@@ -43,18 +43,18 @@ services:
   #     dev:
   #       ipv4_address: 10.1.0.4
 
-  mongo:
-    image: mongo
-    container_name: mongo
-    restart: always
-    tty: true
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: root123
-    volumes:
-      - ./data/mongo:/data/db:rw
-      - ./data/dumps:/var/dumps:rw
-      - ./logs/mongo:/var/log/mongo:rw
-    networks:
-      dev:
-        ipv4_address: 10.1.0.6
+  # mongo:
+  #   image: mongo
+  #   container_name: mongo
+  #   restart: always
+  #   tty: true
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: root
+  #     MONGO_INITDB_ROOT_PASSWORD: root123
+  #   volumes:
+  #     - ./data/mongo:/data/db:rw
+  #     - ./data/dumps:/var/dumps:rw
+  #     - ./logs/mongo:/var/log/mongo:rw
+  #   networks:
+  #     dev:
+  #       ipv4_address: 10.1.0.6
