@@ -60,7 +60,6 @@ const Gifts = () => {
         {
           headers: {
             'Authorization': 'Bearer ' + tkn,
-            'ngrok-skip-browser-warning': 'true',
           },
         });
       setGiftsCount(response.data.giftsCount);
@@ -80,7 +79,6 @@ const Gifts = () => {
         {
           headers: {
             'Authorization': `Bearer ${token}`,
-            'ngrok-skip-browser-warning': 'true',
           },
         }
       );

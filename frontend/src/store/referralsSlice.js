@@ -8,7 +8,6 @@ export const getReferrals = createAsyncThunk(
             const response = await axios.get('/referrals', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
-                    'ngrok-skip-browser-warning': 'true',
                 },
             });
             console.log("Referrals:", response.data);

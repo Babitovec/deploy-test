@@ -44,7 +44,6 @@ const DailyStreak = ({ handleContinue }) => {
                     {
                         headers: {
                             'Authorization': 'Bearer ' + token,
-                            'ngrok-skip-browser-warning': 'true',
                         },
                     }
                 );

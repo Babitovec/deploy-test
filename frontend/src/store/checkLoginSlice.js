@@ -8,7 +8,6 @@ export const checkLoginStatus = createAsyncThunk(
       const response = await axios.get('/login-status', {
         headers: {
           'Authorization': `Bearer ${token}`,
-          'ngrok-skip-browser-warning': 'true',
         },
       });
       return response.data; // возвращаем данные из ответа

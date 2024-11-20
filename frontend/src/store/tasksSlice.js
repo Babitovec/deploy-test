@@ -8,7 +8,6 @@ export const getTasks = createAsyncThunk(
       const response = await axios.get('/tasks', {
         headers: {
           'Authorization': 'Bearer ' + token,
-          'ngrok-skip-browser-warning': 'true',
         },
       });
 

@@ -14,7 +14,6 @@ export const fetchRegistrationData = createAsyncThunk(
     const response = await axios.get(`/registrationReward`, {
       headers: {
         'Authorization': 'Bearer ' + token,
-        'ngrok-skip-browser-warning': 'true',
       },
     });
     return response.data;

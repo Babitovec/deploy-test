@@ -8,7 +8,6 @@ export const getLeaderboard = createAsyncThunk(
             const response = await axios.get('/leaderboard', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
-                    'ngrok-skip-browser-warning': 'true',
                 },
             });
             console.log("Leaderboard:", response.data);

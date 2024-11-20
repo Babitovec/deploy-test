@@ -8,7 +8,6 @@ export const getUserData = createAsyncThunk(
             const response = await axios.get('/get-user', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
-                    'ngrok-skip-browser-warning': 'true',
                 },
             });
             console.log('Данные успешно получены:', `Flames count: ${response.data.flamesCount}`, `Gifts count: ${response.data.giftsCount}`);

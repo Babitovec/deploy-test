@@ -53,7 +53,6 @@ const Home = () => {
       const response = await axios.post('/wallet', { walletAddress: address }, {
         headers: {
           'Authorization': 'Bearer ' + token,
-          'ngrok-skip-browser-warning': 'true',
         },
       });
       console.log('Адрес успешно отправлен:', response.data);
