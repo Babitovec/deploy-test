@@ -15,9 +15,9 @@ services:
       - './nginx.conf:/etc/nginx/nginx.conf'
       - './ssl:/var/ssl:ro'
       - './frontend:/var/www/html/frontend'
-    depends_on:
-      - backend
-      - frontend
+    # depends_on:
+    #   - backend
+    #   - frontend
     networks:
       dev:
         ipv4_address: 10.1.0.250
