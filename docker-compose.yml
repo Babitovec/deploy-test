@@ -25,7 +25,7 @@ services:
     build:
       context: ./backend
     volumes:
-      - .backend:/var/www/html/backend
+      - ./backend:/var/www/html/backend
     command: ["npm", "run", "start"]
     networks:
       dev:
@@ -35,7 +35,9 @@ services:
     build:
       context: ./frontend
     volumes:
-      - .frontend:/var/www/html/frontend
+      - ./frontend:/var/www/html/frontend
+    # command: ["npm", "run", "build"]
+    command: sh -c "npm install && npm run build"
     networks:
       dev:
         ipv4_address: 10.1.0.4
