@@ -10,7 +10,7 @@
 }
 
 .score-stats {
-    background: linear-gradient(to bottom, #FF5718, #f59523 75%);
+    background: linear-gradient(to bottom, #FF5718, #dd9e52 75%);
     width: 100vw;
     display: flex;
     /* Для эффекта затмения скор статс */

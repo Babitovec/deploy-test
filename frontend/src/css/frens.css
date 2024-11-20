@@ -7,7 +7,7 @@
     box-sizing: border-box;
     overflow: auto;
     flex: auto;
-    animation: component-appearence 0.25s forwards;
+    animation: component-appearence 0.25s forwards; 
 }
 
 .masks-emoji-animated {

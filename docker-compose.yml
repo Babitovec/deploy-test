@@ -32,16 +32,16 @@ services:
       dev:
         ipv4_address: 10.1.0.3
 
-  frontend:
-    build:
-      context: ./frontend
-    volumes:
-      - ./frontend:/var/www/html/frontend
-    # command: ["npm", "run", "build"]
-    command: sh -c "npm install && npm run build"
-    networks:
-      dev:
-        ipv4_address: 10.1.0.4
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #   volumes:
+  #     - ./frontend:/var/www/html/frontend
+  #   # command: ["npm", "run", "build"]
+  #   command: sh -c "npm install && npm run build"
+  #   networks:
+  #     dev:
+  #       ipv4_address: 10.1.0.4
 
   mongo:
     image: mongo
