@@ -20,7 +20,7 @@ router.get("/test", test);
 router.post("/create-user", createUser);
 
 //Middleware который не даёт попасть на роуты после него если нет валидного токена
-// router.use(authorize());//Мб надо не вызывать
+router.use(authorize());//Мб надо не вызывать
 
 // Получение данных пользователя
 router.get("/get-user", getUser);
