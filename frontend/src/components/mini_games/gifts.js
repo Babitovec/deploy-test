@@ -56,7 +56,6 @@ const Gifts = () => {
 
   const fetchUserData = async (tkn) => {
     try {
-      console.log('Authorization Header:', 'Bearer ' + tkn); // TEST
       const response = await axios.get(`/get-user`,
         {
           headers: {
