@@ -9,7 +9,12 @@ import { getReferrals } from "./controllers/referralsController.js"
 import { authorize } from "./middlewares/authMiddleware.js";
 import { walletHandler } from "./controllers/walletController.js";
 
+import { test } from "./controllers/test.js"; //test
+
 const router = express.Router();
+
+//test
+router.get("/test", test);
 
 // Создание пользователя
 router.post("/create-user", createUser);

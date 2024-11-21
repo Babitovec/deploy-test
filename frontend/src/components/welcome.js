@@ -42,6 +42,17 @@ const Welcome = () => {
             hash: hash,
         };
 
+        const testRequest = async () => {
+            try {
+              const response = await axios.get('http://localhost:5000/test');
+              console.log('Response from server:', response.data);
+            } catch (error) {
+              console.error('Error occurred during the request:', error);
+            }
+          };
+
+        testRequest();
+
         const fetchData = async () => {
             try {
                 const response = await axios.post('/create-user', userData);
