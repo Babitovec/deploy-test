@@ -6,7 +6,7 @@ import { getLeaderboard } from "./controllers/LeaderboardController.js";
 import { getTasksStatus, checkEmojiInUsername, checkInviteFriends, checkIsWalletConnected, checkIsSubscribedToTgChannel, checkTwitterSub, checkTwitterShare } from "./controllers/TasksController.js";
 import { getRegistrationReward } from "./controllers/InitialRewardController.js";
 import { getReferrals } from "./controllers/referralsController.js"
-// import { authorize } from "./middlewares/authMiddleware.js";
+import { authorize } from "./middlewares/authMiddleware.js";
 import { walletHandler } from "./controllers/walletController.js";
 
 import { test } from "./controllers/test.js"; //test
