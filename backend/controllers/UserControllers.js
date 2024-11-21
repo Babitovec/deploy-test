@@ -4,7 +4,7 @@ import * as jwt from "../utils/jwt.js"
 import { getReferrer } from "./referralController.js";
 
 export const createUser = async (req, res) => {
-    // console.log("Received request body:", req.body); // Логируем запрос
+    console.log("Received request body:", req.body); // Логируем запрос
     try {
         const { dataCheckString, hash } = req.body;
         const isValid = isAuthAttemptValid(dataCheckString, hash);
