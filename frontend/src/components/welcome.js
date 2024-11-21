@@ -21,6 +21,21 @@ const Welcome = () => {
     const bonusReceivedToday = useSelector(selectBonusReceivedToday); // Проверка, был ли бонус получен сегодня
 
     tg.setHeaderColor("#000000");
+    
+    //Test
+    useEffect(() => {
+        const testRequest = async () => {
+            try {
+                console.log("Отправляем запрос на TEST")
+                const response = await axios.get('/test');
+                console.log('Response from server:', response.data);
+            } catch (error) {
+                console.error('Error occurred during the request:', error);
+            }
+        };
+
+        testRequest();
+    }, []);
 
     useEffect(() => {
         tg.ready();
@@ -41,17 +56,6 @@ const Welcome = () => {
             dataCheckString: dataCheckString.slice(0, -1),
             hash: hash,
         };
-
-        const testRequest = async () => {
-            try {
-              const response = await axios.get('http://localhost:5000/test');
-              console.log('Response from server:', response.data);
-            } catch (error) {
-              console.error('Error occurred during the request:', error);
-            }
-          };
-
-        testRequest();
 
         const fetchData = async () => {
             try {
