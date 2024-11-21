@@ -14,7 +14,8 @@ mongoose
     .catch((err) => console.log("DB is not okay!", err));
 
 app.use(cors({
-    origin: [process.env.URL],
+    // origin: [process.env.URL],
+    origin: '*', //test
 }));
 
 app.use(express.json());
