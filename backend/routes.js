@@ -6,7 +6,7 @@ import { getLeaderboard } from "./controllers/LeaderboardController.js";
 import { getTasksStatus, checkEmojiInUsername, checkInviteFriends, checkIsWalletConnected, checkIsSubscribedToTgChannel, checkTwitterSub, checkTwitterShare } from "./controllers/TasksController.js";
 import { getRegistrationReward } from "./controllers/InitialRewardController.js";
 import { getReferrals } from "./controllers/referralsController.js"
-import { authorize } from "./middlewares/authMiddleware.js";
+// import { authorize } from "./middlewares/authMiddleware.js";
 import { walletHandler } from "./controllers/walletController.js";
 
 import { test } from "./controllers/test.js"; //test
@@ -20,7 +20,7 @@ router.get("/test", test);
 router.post("/create-user", createUser);
 
 //Middleware который не даёт попасть на роуты после него если нет валидного токена
-router.use(authorize());//Мб надо не вызывать
+// router.use(authorize());//Мб надо не вызывать
 
 // Получение данных пользователя
 router.get("/get-user", getUser);
