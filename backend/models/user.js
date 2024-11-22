@@ -108,7 +108,7 @@ const UserSchema = new mongoose.Schema({
         name: {
             type: String, // Название задания
             required: true,
-            unique: true, // Если название должно быть уникальным
+            // unique: true, // Если название должно быть уникальным
         },
         completed: {
             type: Boolean, // Статус выполнения
