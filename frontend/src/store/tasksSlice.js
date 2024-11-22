@@ -11,10 +11,9 @@ export const getTasks = createAsyncThunk(
         },
       });
 
-      console.log("Полученные задачи:", response.data);
       return response.data; // Возвращаем данные, чтобы использовать в `extraReducers`
     } catch (error) {
-      return rejectWithValue("Ошибка при получении задач:", error.response.data);
+      return rejectWithValue(error.response.data);
     }
   }
 );

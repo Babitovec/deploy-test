@@ -64,7 +64,7 @@ const Gifts = () => {
         });
       setGiftsCount(response.data.giftsCount);
     } catch (error) {
-      console.error('Ошибка при получении данных пользователя:', error);
+      console.error(error);
     }
   };
 
@@ -93,7 +93,7 @@ const Gifts = () => {
         updatedLoading: false,
       }));
     } catch (error) {
-      console.error('Ошибка при обновлении количества подарков:', error);
+      console.error(error);
     }
   };
 

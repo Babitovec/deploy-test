@@ -6,14 +6,14 @@ export const getReferrals = async (req, res) => {
         const user = await UserModel.findOne({ id });
         if (!user) {
             return res.status(404).json({
-                message: "Пользователь не найден",
+                message: "User not found",
             });
         }
         res.json(user.referrals);
     } catch (err) {
         console.log(err);
         res.status(500).json({
-            message: "Не удалось получить данные о рефералах",
+            message: "Failed to retrieve referral data",
         });
     }
 };

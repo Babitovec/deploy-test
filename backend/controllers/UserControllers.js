@@ -28,7 +28,6 @@ export const createUser = async (req, res) => {
                 user = await UserModel.findByIdAndUpdate(user._id, updateData, { new: true });
                 return res.json({
                     token: jwt.sign(tgUserData.id),
-                    message: "Пользователь уже существует и был обновлен",
                     userExists: true,
                     years: user.years,
                     initial_flames_reward: user.initial_flames_reward,
@@ -95,19 +94,18 @@ export const createUser = async (req, res) => {
             }
             return res.json({
                 token: jwt.sign(tgUserData.id),
-                message: "Пользователь успешно добавлен в БД",
                 showRewards: true,
             });
         }
         else {
             res.status(403).json({
-                message: "Набека для уебка",
+                message: "Don't even try.",
             });
         }
     } catch (err) {
         console.log(err);
         res.status(500).json({
-            message: "Не удалось добавить пользователя",
+            message: "Failed to add a user",
         });
     }
 };
@@ -118,7 +116,7 @@ export const getUser = async (req, res) => {
         const user = await UserModel.findOne({ id: id });
         if (!user) {
             return res.status(404).json({
-                message: "Пользователь не найден",
+                message: "User found",
             });
         }
         res.json({
@@ -128,7 +126,7 @@ export const getUser = async (req, res) => {
     } catch (err) {
         console.log(err);
         res.status(500).json({
-            message: "Не удалось получить данные пользователя",
+            message: "Failed to retrieve user data",
         });
     }
 };

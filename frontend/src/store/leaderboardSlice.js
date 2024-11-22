@@ -10,10 +10,9 @@ export const getLeaderboard = createAsyncThunk(
                     'Authorization': `Bearer ${token}`,
                 },
             });
-            console.log("Leaderboard:", response.data);
             return response.data;
         } catch (error) {
-            return rejectWithValue("Ошибка при получении данных:", error.response.data);
+            return rejectWithValue(error.response.data);
         }
     }
 );

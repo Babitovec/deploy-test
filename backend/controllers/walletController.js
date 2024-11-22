@@ -8,7 +8,7 @@ export const walletHandler = async (req, res) => {
 
         if (!user) {
             return res.status(404).json({
-                message: "Пользователь не найден",
+                message: "User not found",
             });
         }
 
@@ -16,8 +16,8 @@ export const walletHandler = async (req, res) => {
 
         await user.save();
 
-        res.status(200).json({ message: 'Адрес сохранен' });
+        res.status(200).json({ message: 'The address has been saved' });
     } catch (error) {
-        res.status(500).json({ error: 'Ошибка при сохранении адреса' });
+        res.status(500).json({ error: 'Error when saving an address' });
     }
 };

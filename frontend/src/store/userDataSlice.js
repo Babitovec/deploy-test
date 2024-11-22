@@ -10,10 +10,9 @@ export const getUserData = createAsyncThunk(
                     'Authorization': `Bearer ${token}`,
                 },
             });
-            console.log('Данные успешно получены:', `Flames count: ${response.data.flamesCount}`, `Gifts count: ${response.data.giftsCount}`);
             return response.data;
         } catch (error) {
-            return rejectWithValue("Ошибка при получении данных о пользователе:", error.response.data);
+            return rejectWithValue(error.response.data);
         }
     }
 );
@@ -28,11 +27,11 @@ const getUserDataSlice = createSlice({
     },
     reducers: {
         updateFromGifts: (state, action) => {
-          state.flamesCount = action.payload.updatedFlamesCount;
-          state.giftsCount = action.payload.updatedGiftsCount;
-          state.loading = action.payload.updatedLoading;
+            state.flamesCount = action.payload.updatedFlamesCount;
+            state.giftsCount = action.payload.updatedGiftsCount;
+            state.loading = action.payload.updatedLoading;
         },
-      },
+    },
     extraReducers: (builder) => {
         builder
             .addCase(getUserData.pending, (state) => {

@@ -43,21 +43,18 @@ const Home = () => {
 
   const handleConnectWallet = async () => {
     await tonConnectUI.openModal();
-    console.log('Ожидаем обновление адреса...');
   };
 
   // Мемоизация функции отправки адреса
   const sendWalletAddressToDatabase = useCallback(async (address) => {
     try {
-      console.log('Отправка адреса:', address); // Проверка, что адрес передается
       const response = await axios.post('/wallet', { walletAddress: address }, {
         headers: {
           'Authorization': 'Bearer ' + token,
         },
       });
-      console.log('Адрес успешно отправлен:', response.data);
+      console.log(response.data);
     } catch (error) {
-      console.error('Ошибка при отправке адреса:', error);
     }
   }, [token]);
 
@@ -65,7 +62,6 @@ const Home = () => {
   useEffect(() => {
     if (userFriendlyAddress && !wasSent) {
       tg.HapticFeedback.notificationOccurred("success");
-      console.log('User Address detected in useEffect:', userFriendlyAddress); // Проверка после обновления
       sendWalletAddressToDatabase(userFriendlyAddress);
       dispatch(setWasSent(true));
     }

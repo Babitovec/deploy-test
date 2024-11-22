@@ -8,7 +8,7 @@ export const updateLoginAndCheckStatus = async (req, res) => {
         let user = await UserModel.findOne({ id });
 
         if (!user) {
-            return res.status(404).json({ message: "Пользователь не найден" });
+            return res.status(404).json({ message: "User not found" });
         }
 
         const now = new Date();
@@ -22,13 +22,13 @@ export const updateLoginAndCheckStatus = async (req, res) => {
         const bonusReceivedToday = lastTimeLogin && now.getUTCDate() === lastTimeLogin.getUTCDate();
 
         res.json({
-            message: "Время последнего входа обновлено!",
+            message: "Last login time updated!",
             last_time_login: user.last_time_login,
             bonusReceivedToday
         });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ message: "Не удалось обновить время последнего входа и проверить статус бонуса" });
+        res.status(500).json({ message: "Failed to update last login time and check bonus status" });
     }
 };
 
@@ -38,7 +38,7 @@ export const giveDailyBonus = async (req, res) => {
         let user = await UserModel.findOne({ id });
 
         if (!user) {
-            return res.status(404).json({ message: "Пользователь не найден" });
+            return res.status(404).json({ message: "User not found" });
         }
 
         const now = new Date();
@@ -53,7 +53,7 @@ export const giveDailyBonus = async (req, res) => {
             const daysDifference = Math.floor((nowDateUTC - lastRewardDateUTC) / (1000 * 60 * 60 * 24));
 
             if (daysDifference === 0) {
-                return res.status(400).json({ message: "Бонус уже был выдан сегодня" });
+                return res.status(400).json({ message: "Bonus already given today" });
             }
 
             if (daysDifference > 1) {
@@ -125,13 +125,13 @@ export const giveDailyBonus = async (req, res) => {
         await user.save();
 
         res.json({
-            message: "Бонус выдан!",
+            message: "Bonus granted!",
             flames_count: flamesToAdd,
             gifts_count: giftsToAdd,
             today_streak_day: user.streak_day
         });
     } catch (err) {
         console.error(err);
-        res.status(500).json({ message: "Не удалось выдать бонус" });
+        res.status(500).json({ message: "Failed to grant bonus" });
     }
 };

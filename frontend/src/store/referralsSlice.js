@@ -10,10 +10,9 @@ export const getReferrals = createAsyncThunk(
                     'Authorization': `Bearer ${token}`,
                 },
             });
-            console.log("Referrals:", response.data);
             return response.data;
         } catch (error) {
-            return rejectWithValue("Ошибка при получении данных:", error.response.data);
+            return rejectWithValue(error.response.data);
         }
     }
 );

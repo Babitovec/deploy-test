@@ -39,7 +39,7 @@ export const getRegistrationReward = async (req, res) => {
         const id = req.userId;
         let user = await UserModel.findOne({ id });
         if (!user) {
-            return res.status(404).json({ message: "Пользователь не найден" });
+            return res.status(404).json({ message: "User not found" });
         }
 
         // Вычисляем предсказанную дату регистрации
@@ -122,6 +122,6 @@ export const getRegistrationReward = async (req, res) => {
 
     } catch (error) {
         console.error(error);
-        res.status(500).json({ message: "Ошибка при вычислении награды и даты регистрации" });
+        res.status(500).json({ message: "Error when calculating award and registration date" });
     }
 };

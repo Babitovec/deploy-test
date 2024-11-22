@@ -14,18 +14,15 @@ export const handleEmojiInUsername = async (token, dispatch) => {
 
     if (response.data.completed) {
       tg.HapticFeedback.notificationOccurred('success');
-      console.log("Успех, 🔥 имеется");
       dispatch(updateTaskStatus({ taskName: "emoji_in_name", status: "completed" }));
     } else {
       tg.HapticFeedback.notificationOccurred('error');
-      console.log("Неудача, 🔥 не имеется");
     }
   } catch (error) {
-    console.error("Ошибка при проверке эмодзи 🔥:", error);
-    tg.HapticFeedback.notificationOccurred('error'); // Если ошибка
+    console.error(error);
+    tg.HapticFeedback.notificationOccurred('error');
   }
 };
-
 
 export const handleInvitedFriends = async (token, dispatch) => {
   try {
@@ -37,19 +34,16 @@ export const handleInvitedFriends = async (token, dispatch) => {
     });
 
     if (response.data.completed) {
-      console.log("Успех, есть 5 рефов.");
       dispatch(updateTaskStatus({ taskName: "invite_5_friends", status: "completed" }));
       tg.HapticFeedback.notificationOccurred('success');
     } else {
-      console.log("Нет 5 рефов.");
       tg.HapticFeedback.notificationOccurred('error');
     }
   } catch (error) {
-    console.error("Ошибка при проверке рефов:", error);
+    console.error(error);
     tg.HapticFeedback.notificationOccurred('error');
   }
 };
-
 
 export const handleConectedWallet = async (token, dispatch) => {
   try {
@@ -61,15 +55,13 @@ export const handleConectedWallet = async (token, dispatch) => {
     });
 
     if (response.data.completed) {
-      console.log("Успех, кошель подключен.");
       dispatch(updateTaskStatus({ taskName: "connect_wallet", status: "completed" }));
       tg.HapticFeedback.notificationOccurred('success');
     } else {
-      console.log("Неудача, кошелек не подключен!");
       tg.HapticFeedback.notificationOccurred('error');
     }
   } catch (error) {
-    console.error("Ошибка при проверке адреса кошелька:", error);
+    console.error(error);
     tg.HapticFeedback.notificationOccurred('error');
   };
 };
@@ -85,19 +77,16 @@ export const handleOpenTelegramChannel = async (token, dispatch) => {
     });
 
     if (response.data.completed) {
-      console.log("Подписан на тг канал.");
       dispatch(updateTaskStatus({ taskName: "sub_flame_tg", status: "completed" }));
       tg.HapticFeedback.notificationOccurred('success');
     } else {
-      console.log("Не подписан на тг канал.");
       tg.HapticFeedback.notificationOccurred('error');
     }
   } catch (error) {
-    console.error("Ошибка при проверке подписки:", error);
+    console.error(error);
     tg.HapticFeedback.notificationOccurred('error');
   }
 };
-
 
 export const handleOpenX = async (token, dispatch) => {
   tg.openLink("https://x.com/realDogsHouse"); //Заменить на реальный твиттер
@@ -110,15 +99,13 @@ export const handleOpenX = async (token, dispatch) => {
     });
 
     if (response.data.completed) {
-      console.log("Подписан на X.");
       dispatch(updateTaskStatus({ taskName: "sub_flame_x", status: "completed" }));
       tg.HapticFeedback.notificationOccurred('success');
     } else {
-      console.log("Не подписан на X.");
       tg.HapticFeedback.notificationOccurred('error');
     }
   } catch (error) {
-    console.error("Ошибка при проверке подписки X:", error);
+    console.error(error);
     tg.HapticFeedback.notificationOccurred('error');
   }
 };
@@ -134,15 +121,13 @@ export const handleShareOnX = async (token, dispatch) => {
     });
 
     if (response.data.completed) {
-      console.log("Shared on X.");
       dispatch(updateTaskStatus({ taskName: "share_on_x", status: "completed" }));
       tg.HapticFeedback.notificationOccurred('success');
     } else {
-      console.log("Not shared on X.");
       tg.HapticFeedback.notificationOccurred('error');
     }
   } catch (error) {
-    console.error("Ошибка при проверке share on X:", error);
+    console.error(error);
     tg.HapticFeedback.notificationOccurred('error');
   }
 };

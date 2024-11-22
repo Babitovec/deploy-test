@@ -8,7 +8,7 @@ export const updateGiftsCount = async (req, res) => {
 
         if (!user) {
             return res.status(404).json({
-                message: "Пользователь не найден",
+                message: "User not found",
             });
         }
 
@@ -43,7 +43,7 @@ export const updateGiftsCount = async (req, res) => {
             user.gifts_count += 1;
         } else {
             return res.status(400).json({
-                message: "Некорректное действие или недостаточно подарков для уменьшения",
+                message: "err",
             });
         }
 
@@ -55,7 +55,7 @@ export const updateGiftsCount = async (req, res) => {
     } catch (err) {
         console.log(err);
         res.status(500).json({
-            message: "Не удалось обновить количество подарков",
+            message: "Failed to update the number of gifts",
         });
     }
 };

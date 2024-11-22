@@ -26,7 +26,6 @@ const Welcome = () => {
         tg.ready();
 
         const urlParams = new URLSearchParams(tg.initData);
-        console.log(urlParams); //test
         const hash = urlParams.get("hash");
 
         urlParams.delete("hash");
@@ -62,7 +61,6 @@ const Welcome = () => {
                     dispatch(fetchRegistrationData(response.data.id)); // Хз вообще надо ли сюда response.data.id ???
                 }
             } catch (error) {
-                console.error('Ошибка при создании пользователя:', error);
             }
         };
 

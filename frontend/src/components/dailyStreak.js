@@ -34,7 +34,6 @@ const DailyStreak = ({ handleContinue }) => {
     useEffect(() => {
         const fetchDailyBonus = async () => {
             if (!token) {
-                console.error("Token is missing");
                 return;
             }
 
@@ -52,7 +51,6 @@ const DailyStreak = ({ handleContinue }) => {
                 setFlamesReward(flames_count);
                 setGiftsReward(gifts_count);
             } catch (error) {
-                console.error('Ошибка при получении бонуса:', error);
             }
         };
 

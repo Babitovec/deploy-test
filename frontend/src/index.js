@@ -6,8 +6,6 @@ import store from './store/store.js';
 import { BrowserRouter } from "react-router-dom";
 import { SkeletonTheme } from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css';
-
-// Подключение кошелька работает,но не включаю из-за warning https://docs.ton.org/develop/dapps/ton-connect/react
 import { TonConnectUIProvider } from '@tonconnect/ui-react';
 
 import App from "./app.js";
