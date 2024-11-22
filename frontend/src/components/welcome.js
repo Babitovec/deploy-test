@@ -21,21 +21,6 @@ const Welcome = () => {
     const bonusReceivedToday = useSelector(selectBonusReceivedToday); // Проверка, был ли бонус получен сегодня
 
     tg.setHeaderColor("#000000");
-    
-    //Test
-    useEffect(() => {
-        const testRequest = async () => {
-            try {
-                console.log("Отправляем запрос на TEST")
-                const response = await axios.get('/test');
-                console.log('Response from server:', response.data);
-            } catch (error) {
-                console.error('Error occurred during the request:', error);
-            }
-        };
-
-        testRequest();
-    }, []);
 
     useEffect(() => {
         tg.ready();
