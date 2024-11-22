@@ -30,7 +30,7 @@ services:
       - ./backend:/var/www/html/backend
     command: ["npm", "run", "start"]
     environment:
-      MONGO_URI: mongodb://bunder:xlmpower4450@mongodb:27017/Flame
+      MONGO_URI: mongodb://bunder:xlmpower4450@mongodb:27017/Flame?authSource=admin
     networks:
       dev:
         ipv4_address: 10.1.0.3
