@@ -41,7 +41,6 @@ const UserSchema = new mongoose.Schema({
     // Connected wallet
     wallet_address: {
         type: String,
-        unique: true,
     },
     flames_count: {
         type: Number,
@@ -108,7 +107,6 @@ const UserSchema = new mongoose.Schema({
         name: {
             type: String, // Название задания
             required: true,
-            // unique: true, // Если название должно быть уникальным
         },
         completed: {
             type: Boolean, // Статус выполнения
