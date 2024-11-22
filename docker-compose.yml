@@ -25,12 +25,34 @@ services:
   backend:
     build:
       context: ./backend
+    container_name: backend
     volumes:
       - ./backend:/var/www/html/backend
     command: ["npm", "run", "start"]
+    environment:
+      MONGO_URI: mongodb://bunder:xlmpower4450@mongodb:27017/Flame
     networks:
       dev:
         ipv4_address: 10.1.0.3
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017" # Порт для подключения с вашего ПК
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: bunder # Имя пользователя администратора
+      MONGO_INITDB_ROOT_PASSWORD: xlmpower4450 # Пароль администратора
+    volumes:
+      - mongo-data:/data/db # Том для хранения данных
+    networks:
+      dev:
+        ipv4_address: 10.1.0.4
+
+volumes:
+  mongo-data: # Объявляем том для хранения данных
+
 
   # frontend:
   #   build:

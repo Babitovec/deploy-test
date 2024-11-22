@@ -10,8 +10,8 @@ app.set('env', process.env.ENV);
 
 mongoose
     .connect(process.env.DB_URL)
-    .then(() => console.log("DB is okay!"))
-    .catch((err) => console.log("DB is not okay!", err));
+    .then(() => console.log("'Connected to MongoDB'"))
+    .catch((err) => console.error('Error connecting to MongoDB:', err));
 
 app.use(cors({
     origin: [process.env.URL],
