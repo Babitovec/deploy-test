@@ -43,6 +43,22 @@ const ScoreStoryShare = () => {
 
     const selectedImage = images[years] || oneYear; // Выбор изображения, по умолчанию oneYear
 
+    //Массив для сторис
+    const imageArray = [
+        { 1: "https://flame-coin.xyz/static/media/1_year.682807370df54e3f0d03.webp" },
+        { 2: "https://flame-coin.xyz/static/media/2_years.450594bad3befacc4509.webp" },
+        { 3: "https://flame-coin.xyz/static/media/3_years.bc9aa72577a26da876db.webp" },
+        { 4: "https://flame-coin.xyz/static/media/4_years.1703fe4749ad1ed96ac4.webp" },
+        { 5: "https://flame-coin.xyz/static/media/5_years.a65bf3c0f9527a4c6246.webp" },
+        { 6: "https://flame-coin.xyz/static/media/6_years.0f4676546cd98db3c5af.webp" },
+        { 7: "https://flame-coin.xyz/static/media/7_years.990f432fd1a5b7397f1c.webp" },
+        { 8: "https://flame-coin.xyz/static/media/8_years.29cdb95e53cf8e2ee964.webp" },
+        { 9: "https://flame-coin.xyz/static/media/9_years.6d77e89cef16b0cd3aa2.webp" },
+        { 10: "https://flame-coin.xyz/static/media/10_years.da481a8d890e28fe791f.webp" },
+        { 11: "https://flame-coin.xyz/static/media/11_years.7eec117c696b464095f3.webp" },
+        { 12: "https://flame-coin.xyz/static/media/12_years.6ca47a1825c712b6ddc5.webp" }
+    ];
+
     const handleContinue = () => {
         navigate("/Home");
     };
@@ -52,13 +68,19 @@ const ScoreStoryShare = () => {
     };
 
     const handleContinueAndShare = () => {
+        // Находим ссылку из imageArray на основе значения years
+        const selectedStoryImage = imageArray.find(image => image[years]);
+
+        // Берем значение ссылки из объекта
+        const storyImageUrl = selectedStoryImage ? selectedStoryImage[years] : imageArray[0][1]; // По умолчанию берем ссылку для 1 года
+
         tg.shareToStory(
-            'https://funny-hamster-88e22c.netlify.app/static/media/7_years.990f432fd1a5b7397f1c.webp',
+            storyImageUrl,
             {
                 text: `https://t.me/flame_coin_bot/app?startapp=${tg.initDataUnsafe.user?.id}`
             }
         );
-    }
+    };
 
     return (
         <>
