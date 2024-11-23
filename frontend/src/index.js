@@ -14,7 +14,7 @@ const app = ReactDOMClient.createRoot(document.getElementById("app")); // Соз
 
 app.render(
   // Заменить на реальный манифест
-  <TonConnectUIProvider manifestUrl="https://raw.githubusercontent.com/Babitovec/Flame-React-v2.0/refs/heads/main/manifest.json">
+  <TonConnectUIProvider manifestUrl="https://flame-coin.xyz/static/manifest.json">
     <Provider store={store}>
       <SkeletonTheme baseColor="#323232" highlightColor="#626262" borderRadius="25px">
         <BrowserRouter>
