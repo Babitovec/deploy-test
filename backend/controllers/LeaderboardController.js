@@ -24,10 +24,10 @@ export const getLeaderboard = async (req, res) => {
         res.status(200).json({
             totalUsers: totalUsersCount,
             userRank, // Позиция текущего пользователя в рейтинге
-            userUsername: user.username,
+            userUsername: user.username ? user.username : user.first_name,
             userFlamesCount: user.flames_count, // Количество очков пользователя
             leaderboard: topUsers.map(user => ({
-                username: user.username,
+                username: user.username ? user.username : user.first_name,
                 flamesCount: user.flames_count // Используем camelCase для consistency
             })),
         });
