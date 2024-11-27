@@ -115,7 +115,7 @@ export const getRegistrationReward = async (req, res) => {
         // Отправляем результат
         res.json({
             approximateRegistrationDate: registrationDateString,
-            reward,
+            reward: user.initial_flames_reward,
             yearsRegistered,
             is_premium: user.is_premium,
         });

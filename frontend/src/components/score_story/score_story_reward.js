@@ -42,7 +42,7 @@ const ScoreStoryReward = () => {
         <img src={flame_emoji_animated} alt="flame_emoji_animated" className="flame-emoji-animated-story-reward" />
         <div className="flames-count-story">
           <div className="countup-wrapper">
-            <CountUp start={0} end={is_premium ? reward + 500 : reward} duration={2.5} />
+          <CountUp start={0} end={reward} duration={2.5} />
           </div>
         </div>
         <span className="flame-text-story">FLAME</span>
@@ -50,7 +50,7 @@ const ScoreStoryReward = () => {
         <div className="rewards-description">
           <div className="rewards-box-age">
             <img src={telegram_age_emoji} alt="telegram_age_emoji" className="rewards-emoji" />
-            <span className="reward-title">Account age: {(reward ?? 0).toLocaleString('en-US')}</span>
+            <span className="reward-title">Account age: {(is_premium ? reward - 500 : reward).toLocaleString('en-US')}</span>
           </div>
           <div className="rewards-box-premium">
             <img src={premium_emoji} alt="premium_emoji" className="rewards-emoji" />

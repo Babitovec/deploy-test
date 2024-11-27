@@ -49,7 +49,7 @@ const Welcome = () => {
                     dispatch(getRegistrationData({
                         token: response.data.token,
                         yearsRegistered: response.data.years,
-                        reward: response.data.initial_flames_reward - 500,
+                        reward: response.data.initial_flames_reward,
                         is_premium: response.data.is_premium,
                     }));
                 }

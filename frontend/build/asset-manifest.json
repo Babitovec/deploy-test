@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.cf03dda5.css",
-    "main.js": "/static/js/main.fe3eb571.js",
+    "main.js": "/static/js/main.1f728fb4.js",
     "static/media/money_emoji_animated.gif": "/static/media/money_emoji_animated.cf5341451b0d5ddf1e90.gif",
     "static/media/masks_animated.gif": "/static/media/masks_animated.87d14b84a0225fbd2625.gif",
     "static/media/gz-daily.gif": "/static/media/gz-daily.8434e242da4fc3f7678d.gif",
@@ -36,10 +36,10 @@
     "static/media/play-button.webp": "/static/media/play-button.0f5e710b2757962fe5ea.webp",
     "static/media/wallet_icon.webp": "/static/media/wallet_icon.2465a3525c3418ce3af6.webp",
     "main.cf03dda5.css.map": "/static/css/main.cf03dda5.css.map",
-    "main.fe3eb571.js.map": "/static/js/main.fe3eb571.js.map"
+    "main.1f728fb4.js.map": "/static/js/main.1f728fb4.js.map"
   },
   "entrypoints": [
     "static/css/main.cf03dda5.css",
-    "static/js/main.fe3eb571.js"
+    "static/js/main.1f728fb4.js"
   ]
 }
