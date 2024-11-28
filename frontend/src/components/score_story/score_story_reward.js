@@ -42,7 +42,7 @@ const ScoreStoryReward = () => {
         <img src={flame_emoji_animated} alt="flame_emoji_animated" className="flame-emoji-animated-story-reward" />
         <div className="flames-count-story">
           <div className="countup-wrapper">
-          <CountUp start={0} end={reward} duration={2.5} />
+            <CountUp start={0} end={reward} duration={2.5} />
           </div>
         </div>
         <span className="flame-text-story">FLAME</span>

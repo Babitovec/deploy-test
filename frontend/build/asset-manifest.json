@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.cf03dda5.css",
-    "main.js": "/static/js/main.1f728fb4.js",
-    "static/media/money_emoji_animated.gif": "/static/media/money_emoji_animated.cf5341451b0d5ddf1e90.gif",
-    "static/media/masks_animated.gif": "/static/media/masks_animated.87d14b84a0225fbd2625.gif",
-    "static/media/gz-daily.gif": "/static/media/gz-daily.8434e242da4fc3f7678d.gif",
-    "static/media/gift_emoji_animated.gif": "/static/media/gift_emoji_animated.c47fc3f9b84f279996c5.gif",
-    "static/media/tasks_gift_emoji_animated.gif": "/static/media/tasks_gift_emoji_animated.84effce307fa625c70ff.gif",
-    "static/media/burn_emoji_animated.gif": "/static/media/burn_emoji_animated.d040c685fb51108515a7.gif",
+    "main.js": "/static/js/main.dd42d707.js",
+    "static/media/gift_emoji_animated.gif": "/static/media/gift_emoji_animated.ac6b409992286f5d0612.gif",
+    "static/media/money_emoji_animated.gif": "/static/media/money_emoji_animated.29d76668f396d6f7217d.gif",
+    "static/media/gz-daily.gif": "/static/media/gz-daily.6fe6d9e37cabe82456fb.gif",
     "static/media/crown_emoji_animated_compressed.gif": "/static/media/crown_emoji_animated_compressed.9dc2b517e93339e31bea.gif",
-    "static/media/congratulations_emoji_animated.gif": "/static/media/congratulations_emoji_animated.55d0261c47dcd2acadc8.gif",
+    "static/media/burn_emoji_animated.gif": "/static/media/burn_emoji_animated.1efc2dfc98b1470bb84f.gif",
+    "static/media/tasks_gift_emoji_animated.gif": "/static/media/tasks_gift_emoji_animated.b271d6727f8635d12f0e.gif",
+    "static/media/masks_animated.gif": "/static/media/masks_animated.0bd5dc09dd393a7361eb.gif",
+    "static/media/congratulations_emoji_animated.gif": "/static/media/congratulations_emoji_animated.8a2182f81a9df9c18dc2.gif",
     "static/media/8_years.webp": "/static/media/8_years.29cdb95e53cf8e2ee964.webp",
     "static/media/9_years.webp": "/static/media/9_years.6d77e89cef16b0cd3aa2.webp",
     "static/media/6_years.webp": "/static/media/6_years.0f4676546cd98db3c5af.webp",
@@ -36,10 +36,10 @@
     "static/media/play-button.webp": "/static/media/play-button.0f5e710b2757962fe5ea.webp",
     "static/media/wallet_icon.webp": "/static/media/wallet_icon.2465a3525c3418ce3af6.webp",
     "main.cf03dda5.css.map": "/static/css/main.cf03dda5.css.map",
-    "main.1f728fb4.js.map": "/static/js/main.1f728fb4.js.map"
+    "main.dd42d707.js.map": "/static/js/main.dd42d707.js.map"
   },
   "entrypoints": [
     "static/css/main.cf03dda5.css",
-    "static/js/main.1f728fb4.js"
+    "static/js/main.dd42d707.js"
   ]
 }
